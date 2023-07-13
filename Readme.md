@@ -247,6 +247,12 @@ IndexError: Cannot choose from an empty sequence
   --image test_im.png  \
   --save_dir out/ \
   --secret Qin'sLab
+
+(stegastamp-env) [Stegastamp] # python3 decode_image.py \
+  saved_models/stegastamp_pretrained \
+  --image test_hidden.png  \
+
+(stegastamp-env) [Stegastamp] # python3 detector.py --detector_model detector_models/stegastamp_detector --decoder_model saved_models/stegastamp_pretrained --video video\(6\).mp4 --secret_size 7 --save_video ./1.mp4
 ```
 如果看到该目录下多了一个out文件夹并且里面有加密的图像和其掩膜证明环境配置完成并且代码运行正常。
 ## 参考
